@@ -1,5 +1,7 @@
 package com.consumer_kafka.consumer_kafka.kafka;
 
+import com.consumer_kafka.consumer_kafka.entity.WikimediaData;
+import com.consumer_kafka.consumer_kafka.repository.WikimediaDataRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaListener;
@@ -11,7 +13,7 @@ public class WikimediaConsumer {
 
     private WikimediaDataRepository dataRepository;
 
-    public WikimediaConsumer(WikimediaConsumer dataRepository) {
+    public WikimediaConsumer(WikimediaDataRepository dataRepository) {
         this.dataRepository = dataRepository;
     }
 
