@@ -14,8 +14,6 @@ public class WikimediaData {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-//    @Lob annotation specifies that the database should store the property as Large Object
-//    @Lob
     @Column( length = 100000 )
     private String wikiEventData;
 
