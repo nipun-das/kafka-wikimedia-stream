@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 public class WikimediaConsumer {
     private static final Logger LOGGER = LoggerFactory.getLogger(WikimediaConsumer.class);
 
-    private WikimediaDataRepository dataRepository;
+    private final WikimediaDataRepository dataRepository;
 
     public WikimediaConsumer(WikimediaDataRepository dataRepository) {
         this.dataRepository = dataRepository;

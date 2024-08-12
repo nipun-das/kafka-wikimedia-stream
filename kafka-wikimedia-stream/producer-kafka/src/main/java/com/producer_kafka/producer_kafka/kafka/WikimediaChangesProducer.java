@@ -1,8 +1,5 @@
 package com.producer_kafka.producer_kafka.kafka;
 
-
-//import com.launchdarkly.eventsource.EventHandler;
-//import com.launchdarkly.eventsource.EventSource;
 import com.launchdarkly.eventsource.EventHandler;
 import com.launchdarkly.eventsource.EventSource;
 import org.slf4j.Logger;
@@ -22,7 +19,7 @@ public class WikimediaChangesProducer {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(WikimediaChangesProducer.class);
 
-    private KafkaTemplate<String, String> kafkaTemplate;
+    private final KafkaTemplate<String, String> kafkaTemplate;
 
     public WikimediaChangesProducer(KafkaTemplate<String, String> kafkaTemplate) {
         this.kafkaTemplate = kafkaTemplate;
